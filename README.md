@@ -1,0 +1,2 @@
+# requireProject
+一个关于requireJS的兼容IE8的架构
