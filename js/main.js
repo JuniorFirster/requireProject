@@ -7,4 +7,12 @@ require.config({
         "require": "../libs/require",
         "jquery": "../libs/jquery.min"
     }
+});
+
+require([
+    "require",
+    "jquery",
+    "index"
+],function(require,$){
+
 })
