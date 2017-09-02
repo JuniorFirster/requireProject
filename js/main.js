@@ -14,5 +14,6 @@ require([
     "jquery",
     "index"
 ],function(require,$){
-
+    //执行index.js的初始化操作
+    require("index").Init();
 })

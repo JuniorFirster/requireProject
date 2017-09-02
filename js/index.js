@@ -10,9 +10,17 @@ define(
         "config/route",
     ],
     function (require, $) {
-        var IndexOperation = {
-            //内容略……
 
+        var Filter = require("config/filter");
+        var Global = require("config/global");
+        var Route = require("config/route");
+
+        var IndexOperation = {
+            //初始化操作函数
+            Init:function(){
+                console.log("执行初始化操作");
+                console.log()
+            }
         }
 
         return IndexOperation
