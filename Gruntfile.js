@@ -23,11 +23,24 @@ module.exports = function(grunt){
                     name: "main",
                     out: "output.js"
                 }
+            },
+            concat: {
+                css: {
+                    src: ["css/*.css"],
+                    dest: "./build/output.css"
+                }
+            },
+            cssmin: {
+                buildCss: {
+                    src: "./build/output.css",
+                    dest: "./build/output.min.js"
+                }
             }
         },
-        csscat: {
-            css: {
-                src: ["*.css"]
+        uglify: {
+            build: {
+                src: "./build/output.js",
+                dest: "./build/output.min.js"
             }
         }
 
@@ -38,5 +51,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-requirejs");
 
-    grunt.registerTask("default",['uglify']);
+    grunt.registerTask("default",["concat","cssmin","requirejs","uglify"]);
 }
