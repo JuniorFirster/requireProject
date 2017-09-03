@@ -1,10 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>风险侦测平台</title>
+    <link type="text/css" rel="stylesheet" href="./static/output.min_fedceb5c12.css" />
 </head>
 <body>
-<script src="./libs/require.js" data-main="./js/main.js"></script>
+<!-- loading层 -->
+<div class="modal x-loading" id="loading" style="display:none;">
+    <div class="loading-bg"></div>
+</div>
+<!-- 第一次loading效果 -->
+<div class="x-canvas" id="x-canvas">
+    <span class="star star1"></span>
+    <span class="star pink star2"></span>
+    <span class="star blue star3"></span>
+    <span class="star yellow star4"></span>
+    <span class="star star5"></span>
+    <span class="star pink star6"></span>
+    <span class="star blue star7"></span>
+    <span class="star yellow star8"></span>
+    <span class="star star9"></span>
+    <span class="star pink star10"></span>
+    <span class="star blue star11"></span>
+    <span class="star yellow star12"></span>
+    <div class="star-layout">
+        <i class="glyphicon glyphicon-star"></i>
+        <i class="glyphicon glyphicon-star"></i>
+        <i class="glyphicon glyphicon-star"></i>
+        <i class="glyphicon glyphicon-star"></i>
+        <i class="glyphicon glyphicon-star"></i>
+    </div>
+</div>
+<div>
+    <div class="header-skin">
+        <div class="container">
+            <h1 class="logo">风险侦测平台</h1>
+            <div class="pull-right header-layout">
+                <img src="img/avatar.png" alt="头像" class="pull-left">
+                <p class="pull-left login-name" id="username"></p>
+                <a href="javascript:void(0);" class="pull-left logout" id="logout">退出</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container" >
+            <div class="left-side" id="nav">
+
+            </div>
+            <div id="content" onload="viewLoad()"></div>
+
+        </div>
+    </div>
+
+
+</div>
+<script type="text/javascript" src="./lib/require/require.js" data-main="./js/main.js"></script>
 </body>
 </html>
