@@ -19,22 +19,25 @@ module.exports = function(grunt){
             complie: {
                 options: {
                     baseUrl: "./",
+                    //paths: {requireLib: "./lib/"},
+                    include: ["./lib/require.js","./lib/jquery.min.js","./lib/routie.js"],
                     mainConfigFile: "./js/main.js",
-                    name: "main",
+                    //optimize:'none',
+                    name: "./js/main",
                     out: "output.js"
                 }
-            },
-            concat: {
-                css: {
-                    src: ["css/*.css"],
-                    dest: "./build/output.css"
-                }
-            },
-            cssmin: {
-                buildCss: {
-                    src: "./build/output.css",
-                    dest: "./build/output.min.js"
-                }
+            }
+        },
+        concat: {
+            css: {
+                src: ["css/index.css","css/bootstrap.css"],
+                dest: "./build/output.css"
+            }
+        },
+        cssmin: {
+            buildCss: {
+                src: "./build/output.css",
+                dest: "./build/output.min.css"
             }
         },
         uglify: {
