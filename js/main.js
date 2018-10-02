@@ -3,7 +3,7 @@
  */
 require.config({
     baseUrl: "./js",
-    path:{
+    paths:{
         "require": "../libs/require",
         "jquery": "../libs/jquery.min"
     }
@@ -14,7 +14,7 @@ require([
     "jquery",
     "index"
 ],function(require,$){
-    $.(function(){
+    $(function(){
         require("index").Init();
     })
     //执行index.js的初始化操作
